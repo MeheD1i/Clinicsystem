@@ -78,8 +78,10 @@ public class RegistrationActivity extends AppCompatActivity {
                                     .child(firebaseAuth.getCurrentUser().getUid())
                                     .setValue(user);
 
-                            // Redirect to the corresponding role-specific activity
-                            // ...
+                            // Redirect to the PatientActivity when registration is successful
+                            Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish(); // Optional: finish the RegistrationActivity to prevent going back
 
                         } else {
                             Toast.makeText(RegistrationActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();

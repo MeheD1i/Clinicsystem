@@ -76,11 +76,11 @@ public class LoginActivity extends AppCompatActivity {
                     String role = user.getRole();
                     if (role.equals("patient")) {
                         startActivity(new Intent(LoginActivity.this, PatientActivity.class));
-                    } else if (role.equals("doctor")) {
+                    } else if (role.equals("Doctor")) {
                         startActivity(new Intent(LoginActivity.this, DoctorActivity.class));
-                    } else if (role.equals("radiology")) {
+                    } else if (role.equals("Radiology Lab Worker")) {
                         startActivity(new Intent(LoginActivity.this, RadiologyLabActivity.class));
-                    } else if (role.equals("prosthetic")) {
+                    } else if (role.equals("Prosthetic Lab Worker")) {
                         startActivity(new Intent(LoginActivity.this, ProstheticLabActivity.class));
                     }
                 }
