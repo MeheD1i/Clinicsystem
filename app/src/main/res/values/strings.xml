@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Clinicsystem</string>
+    <string-array name="roles_array">
+        <item>Patient</item>
+        <item>Doctor</item>
+        <item>Radiology Lab Worker</item>
+        <item>Prosthetic Lab Worker</item>
+    </string-array>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "671653740566",
+    "project_id": "clinicsystem-2f099",
+    "storage_bucket": "clinicsystem-2f099.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671653740566:android:160e65060014d71bc7f537",
+        "android_client_info": {
+          "package_name": "com.example.clinicsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDABqWqSUN0WVMaT1Fw_BRql5ddOtO399E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
