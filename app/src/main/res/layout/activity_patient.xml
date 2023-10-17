@@ -26,7 +26,16 @@
         android:layout_marginTop="16dp"
         android:text="Patient" />
 
+    <!-- Include a TextView for the user's profile name -->
+    <TextView
+        android:id="@+id/profileNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/roleTextView"
+        android:layout_marginTop="8dp"
+        android:text="User's Name" />
+
+    <!-- Add other widgets and layout elements for your PatientActivity as needed -->
 
 </RelativeLayout>
-
-
