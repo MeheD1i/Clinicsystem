@@ -46,6 +46,15 @@
         android:layout_marginTop="8dp"
         android:text="Email is not verified" />
 
+    <Button
+        android:id="@+id/bookAppointmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/emailStatusTextView"
+        android:layout_marginTop="16dp"
+        android:text="Book Appointment" />
+
     <!-- Add other widgets and layout elements for your PatientActivity as needed -->
 
 </RelativeLayout>

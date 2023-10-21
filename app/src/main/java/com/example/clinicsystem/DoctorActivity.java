@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,8 @@ public class DoctorActivity extends AppCompatActivity {
     private TextView emailStatusTextView; // Add this TextView for email status
 
     private FirebaseAuth firebaseAuth;
+    Button b2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,16 @@ public class DoctorActivity extends AppCompatActivity {
         emailStatusTextView = findViewById(R.id.emailStatusTextView); // Initialize the emailStatusTextView
 
         firebaseAuth = FirebaseAuth.getInstance();
+        b2 =(Button)findViewById(R.id.abttn2);
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),dAppoint.class));
+            }
+        });
 
-        // Fetch the user's role and name from the database
+
+    // Fetch the user's role and name from the database
         fetchUserRoleAndName();
         // Check and display email verification status
         checkEmailVerificationStatus();

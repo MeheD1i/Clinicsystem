@@ -44,5 +44,19 @@
         android:layout_marginTop="8dp"
         android:text="Email is not verified" />
 
+    <Button
+        android:id="@+id/abttn2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="50dp"
+        android:text="Show the appointment list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338" />
+
 
 </RelativeLayout>

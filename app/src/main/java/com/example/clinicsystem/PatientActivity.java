@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,15 @@ public class PatientActivity extends AppCompatActivity {
         roleTextView = findViewById(R.id.roleTextView);
         profileNameTextView = findViewById(R.id.profileNameTextView);
         emailStatusTextView = findViewById(R.id.emailStatusTextView); // Initialize the emailStatusTextView
+        Button bookAppointmentButton = findViewById(R.id.bookAppointmentButton);
+
+        bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PatientActivity.this, pAppoint.class);
+                startActivity(intent);
+            }
+        });
 
         firebaseAuth = FirebaseAuth.getInstance();
 

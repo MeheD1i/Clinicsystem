@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             checkUserRoleAndNavigate();
+                            Toast.makeText(LoginActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
                         }
@@ -74,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
                 if (user != null) {
                     String role = user.getRole();
-                    if (role.equals("patient")) {
+                    if (role.equals("Patient")) {
                         startActivity(new Intent(LoginActivity.this, PatientActivity.class));
                     } else if (role.equals("Doctor")) {
                         startActivity(new Intent(LoginActivity.this, DoctorActivity.class));

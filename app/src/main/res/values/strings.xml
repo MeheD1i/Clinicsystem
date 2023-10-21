@@ -5,5 +5,17 @@
         <item>Doctor</item>
         <item>Radiology Lab Worker</item>
         <item>Prosthetic Lab Worker</item>
+
+    </string-array>
+    <string-array name="times">
+        <item>4.00PM</item>
+        <item>4.30PM</item>
+        <item>5.00PM</item>
+        <item>6.00PM</item>
+        <item>7.00PM</item>
+        <item>8.00PM</item>
+        <item>9.00PM</item>
+        <item>10.00PM</item>
+        <item>10.30PM</item>
     </string-array>
 </resources>
