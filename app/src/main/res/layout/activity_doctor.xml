@@ -34,21 +34,13 @@
         android:layout_marginTop="8dp"
         android:text="User's Name" />
 
-    <!-- Include a TextView for email verification status -->
-    <TextView
-        android:id="@+id/emailStatusTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/profileNameTextView"
-        android:layout_marginTop="8dp"
-        android:text="Email is not verified" />
+
 
     <Button
         android:id="@+id/abttn2"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         android:layout_marginLeft="50dp"
         android:text="Show the appointment list"
         app:layout_constraintBottom_toBottomOf="parent"

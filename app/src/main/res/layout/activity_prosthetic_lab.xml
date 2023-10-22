@@ -34,15 +34,5 @@
         android:layout_marginTop="8dp"
         android:text="User's Name" />
 
-    <!-- Include a TextView for email verification status -->
-    <TextView
-        android:id="@+id/emailStatusTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/profileNameTextView"
-        android:layout_marginTop="8dp"
-        android:text="Email is not verified" />
-
 
 </RelativeLayout>

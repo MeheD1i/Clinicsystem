@@ -36,11 +36,20 @@ public class PatientActivity extends AppCompatActivity {
         profileNameTextView = findViewById(R.id.profileNameTextView);
         emailStatusTextView = findViewById(R.id.emailStatusTextView); // Initialize the emailStatusTextView
         Button bookAppointmentButton = findViewById(R.id.bookAppointmentButton);
+        Button cancelAppointmentButton = findViewById(R.id.cancelAppointmentButton);
 
         bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PatientActivity.this, pAppoint.class);
+                startActivity(intent);
+            }
+        });
+
+        cancelAppointmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PatientActivity.this, CancelAppointmentActivity.class);
                 startActivity(intent);
             }
         });
@@ -93,7 +102,7 @@ public class PatientActivity extends AppCompatActivity {
             if (isEmailVerified) {
                 emailStatusTextView.setText("Email is verified");
             } else {
-                emailStatusTextView.setText("Email is not verified (click here to verify)");
+                emailStatusTextView.setText("You are a Guest (click here to verify)");
             }
         }
     }
