@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,27 @@ public class ProstheticLabActivity extends AppCompatActivity {
 
         // Fetch the user's role and name from the database
         fetchUserRoleAndName();
+
+        Button inventoryViewButton = findViewById(R.id.inventoryViewButton);
+        Button addSuppliesButton = findViewById(R.id.addSuppliesButton);
+
+        inventoryViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to MaterialsInventoryActivity
+                Intent intent = new Intent(ProstheticLabActivity.this, MaterialsInventoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        addSuppliesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to AddMaterialsActivity
+                Intent intent = new Intent(ProstheticLabActivity.this, AddMaterialsActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

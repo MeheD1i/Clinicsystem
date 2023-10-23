@@ -34,5 +34,23 @@
         android:layout_marginTop="8dp"
         android:text="User's Name" />
 
+    <Button
+        android:id="@+id/inventoryViewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileNameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Inventory View" />
+
+    <Button
+        android:id="@+id/addSuppliesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inventoryViewButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Add Supplies" />
+
 
 </RelativeLayout>
