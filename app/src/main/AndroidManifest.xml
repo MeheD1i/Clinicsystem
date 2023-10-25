@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Clinicsystem"
         tools:targetApi="31">
         <activity
+            android:name=".CreditCardPaymentStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PayPalPaymentStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PayPalPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreditCardPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientPaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddMaterialsActivity"
             android:exported="false" />
         <activity

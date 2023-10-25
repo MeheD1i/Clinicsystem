@@ -23,6 +23,7 @@ public class PatientActivity extends AppCompatActivity {
     private TextView roleTextView;
     private TextView profileNameTextView;
     private TextView emailStatusTextView; // Add this TextView for email status
+    private Button makePaymentButton;
 
     private FirebaseAuth firebaseAuth;
 
@@ -37,6 +38,7 @@ public class PatientActivity extends AppCompatActivity {
         emailStatusTextView = findViewById(R.id.emailStatusTextView); // Initialize the emailStatusTextView
         Button bookAppointmentButton = findViewById(R.id.bookAppointmentButton);
         Button cancelAppointmentButton = findViewById(R.id.cancelAppointmentButton);
+        makePaymentButton = findViewById(R.id.buttonMakePayment);
 
         bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,15 @@ public class PatientActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PatientActivity.this, CancelAppointmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        makePaymentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // When the button is clicked, navigate to the PatientPaymentActivity
+                Intent intent = new Intent(PatientActivity.this, PatientPaymentActivity.class);
                 startActivity(intent);
             }
         });
