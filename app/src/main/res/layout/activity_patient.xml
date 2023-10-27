@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@drawable/bg2"
     tools:context=".PatientActivity">
 
     <!-- Include an ImageView for the profile picture -->
@@ -79,6 +80,15 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:text="Make Payment" />
+
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonMakePayment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Sign Out" />
 
 
     <!-- Add other widgets and layout elements for your PatientActivity as needed -->

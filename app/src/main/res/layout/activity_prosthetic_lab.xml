@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@drawable/bg2"
     tools:context=".ProstheticLabActivity">
 
     <ImageView
@@ -14,6 +15,18 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:src="@drawable/prosthetic" />
+
+
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonManageReport"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Sign Out" />
+
 
     <TextView
         android:id="@+id/roleTextView"
@@ -51,6 +64,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="Add Supplies" />
+
+    <Button
+        android:id="@+id/buttonManageReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inventoryViewButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Report Status" />
 
 
 </RelativeLayout>

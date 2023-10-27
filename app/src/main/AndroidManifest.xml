@@ -13,6 +13,42 @@
         android:theme="@style/Theme.Clinicsystem"
         tools:targetApi="31">
         <activity
+            android:name=".Factory"
+            android:exported="false" />
+        <activity
+            android:name=".tongue2"
+            android:exported="false" />
+        <activity
+            android:name=".blood2"
+            android:exported="false" />
+        <activity
+            android:name=".Xr_ay"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentA"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".dSchedule"
+            android:exported="false" />
+        <activity
+            android:name=".Diagnostic"
+            android:exported="false" />
+        <activity
             android:name=".CreditCardPaymentStatusActivity"
             android:exported="false" />
         <activity

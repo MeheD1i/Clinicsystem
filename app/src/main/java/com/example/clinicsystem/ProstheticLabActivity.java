@@ -39,7 +39,21 @@ public class ProstheticLabActivity extends AppCompatActivity {
 
         Button inventoryViewButton = findViewById(R.id.inventoryViewButton);
         Button addSuppliesButton = findViewById(R.id.addSuppliesButton);
+        Button manageReportButton = findViewById(R.id.buttonManageReport);
 
+        Button signOutButton = findViewById(R.id.signOutButton);
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Sign out the user
+                firebaseAuth.signOut();
+
+                // Redirect to the login activity or any other desired activity
+                Intent intent = new Intent(ProstheticLabActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish(); // Close the current activity
+            }
+        });
         inventoryViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +68,15 @@ public class ProstheticLabActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Navigate to AddMaterialsActivity
                 Intent intent = new Intent(ProstheticLabActivity.this, AddMaterialsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        manageReportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Handle the button click, e.g., navigate to a "Manage Report" activity
+                Intent intent = new Intent(ProstheticLabActivity.this, ManageReportActivity.class);
                 startActivity(intent);
             }
         });

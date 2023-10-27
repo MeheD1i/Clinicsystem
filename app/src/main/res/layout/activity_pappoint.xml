@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg2"
     tools:context=".pAppoint">
     <TextView
         android:id="@+id/paetxt1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Enter the name here "
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -24,6 +26,7 @@
         android:text="Choose date"
         style="?android:spinnerStyle"
         android:onClick="openDatePicker"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

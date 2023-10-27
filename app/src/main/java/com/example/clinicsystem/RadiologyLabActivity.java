@@ -2,11 +2,14 @@ package com.example.clinicsystem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,7 +25,9 @@ public class RadiologyLabActivity extends AppCompatActivity {
     private TextView profileNameTextView; // Add this TextView for profile name
 
     private FirebaseAuth firebaseAuth;
+    Button b3,b4,b5;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +36,41 @@ public class RadiologyLabActivity extends AppCompatActivity {
         roleTextView = findViewById(R.id.roleTextView);
         profileNameTextView = findViewById(R.id.profileNameTextView); // Initialize the profileNameTextView
 
+
         firebaseAuth = FirebaseAuth.getInstance();
+        b3 = findViewById(R.id.abttn3);
+        b4 =  findViewById(R.id.sbttn4);
+        b5 =  findViewById(R.id.sbttn5);
+        Button signOutButton = findViewById(R.id.signOutButton);
 
         // Fetch the user's role and name from the database
         fetchUserRoleAndName();
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Diagnostic.class));
+            }
+        });
 
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Factory.class));
+            }
+        });
+
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Sign out the user
+                firebaseAuth.signOut();
+
+                // Redirect to the login activity or any other desired activity
+                Intent intent = new Intent(RadiologyLabActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish(); // Close the current activity
+            }
+        });
 
 
     }

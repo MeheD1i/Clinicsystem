@@ -2,6 +2,8 @@ package com.example.clinicsystem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,8 @@ public class PatientActivity extends AppCompatActivity {
     private TextView emailStatusTextView; // Add this TextView for email status
     private Button makePaymentButton;
 
+    private Button logOutButton;
+
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -39,6 +43,8 @@ public class PatientActivity extends AppCompatActivity {
         Button bookAppointmentButton = findViewById(R.id.bookAppointmentButton);
         Button cancelAppointmentButton = findViewById(R.id.cancelAppointmentButton);
         makePaymentButton = findViewById(R.id.buttonMakePayment);
+        logOutButton =(Button) findViewById(R.id.logOutButton);
+
 
         bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +68,19 @@ public class PatientActivity extends AppCompatActivity {
                 // When the button is clicked, navigate to the PatientPaymentActivity
                 Intent intent = new Intent(PatientActivity.this, PatientPaymentActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        logOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Sign out the user
+                firebaseAuth.signOut();
+
+                // Redirect to the login activity or any other desired activity
+                Intent intent = new Intent(PatientActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish(); // Close the current activity
             }
         });
 

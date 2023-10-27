@@ -28,12 +28,10 @@ public class dAppoint extends AppCompatActivity {
                 patient2List.clear();
                 for(DataSnapshot patientdataSnapshot :
                         snapshot.getChildren()){
-                    patient2 patient2 =
-                            patientdataSnapshot.getValue(patient2.class);
+                    patient2 patient2 = patientdataSnapshot.getValue(patient2.class);
                     patient2List.add(patient2);
                 }
-                ListAdapter adapter = new
-                        ListAdapter(dAppoint.this,patient2List);
+                ListAdapter adapter = new ListAdapter(dAppoint.this,patient2List);
                 myListview.setAdapter(adapter);
             }
             @Override
